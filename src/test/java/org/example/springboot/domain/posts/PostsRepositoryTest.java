@@ -20,6 +20,7 @@ public class PostsRepositoryTest {
     @Autowired
     PostsRepository postsRepository;
 
+
     @After
     public void cleanup() {
         postsRepository.deleteAll();
@@ -33,7 +34,7 @@ public class PostsRepositoryTest {
         postsRepository.save(Posts.builder()
                 .title(title)
                 .content(content)
-                .author("sshssh@gmail.com")
+                .author("sshssh@spring.com")
                 .build());
 
         List<Posts> postsList = postsRepository.findAll();
